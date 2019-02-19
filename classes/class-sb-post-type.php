@@ -3,14 +3,12 @@ if (!defined('ABSPATH')){
 	exit; // Exit if accessed directly
 }
 
-
 class SB_Post_Type{
 
 	function __construct() {
 	    add_action('init',array($this,'scratch_builder_postype'));
 	}
 
-	// Register Custom Post Type
 	function scratch_builder_postype() {
 
 		$labels = array(
@@ -63,11 +61,7 @@ class SB_Post_Type{
 			'capability_type'       => 'page',
 		);
 		register_post_type( 'scratch_builder', $args );
-
 	}
 }
 
 new SB_Post_Type;
-
-
-//add_action( 'init', 'scratch_builder_postype', 0 );
