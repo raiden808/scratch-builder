@@ -4,11 +4,9 @@ if (!defined('ABSPATH')){
 }
 
 class SB_Post_Type{
-
 	function __construct() {
 	    add_action('init',array($this,'scratch_builder_postype'));
 	}
-
 	function scratch_builder_postype() {
 
 		$labels = array(
