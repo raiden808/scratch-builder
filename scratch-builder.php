@@ -19,3 +19,4 @@ define( 'SB_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'SB_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
 require_once(SB_PLUGIN_PATH.'/classes/class-sb-post-type.php');
+require_once(SB_PLUGIN_PATH.'/classes/class-sb-builders.php');
