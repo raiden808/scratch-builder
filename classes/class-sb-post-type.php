@@ -43,7 +43,7 @@ class SB_Post_Type{
 			'description'           => __( 'Post Type Description', 'text_domain' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title' ),
-			'taxonomies'            => array( 'category', 'post_tag' ),
+			'taxonomies'            => array( 'build_type' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
