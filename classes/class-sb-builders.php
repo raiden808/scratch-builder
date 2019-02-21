@@ -7,8 +7,12 @@ class SB_Builders{
 
 	}
 
-	function sb_builder_textareas(){
+	function sb_register_metabox(){
 		
+	}
+
+	function sb_builder_textareas_callback(){
+
 	}
 }
 
