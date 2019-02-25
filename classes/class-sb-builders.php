@@ -8,11 +8,14 @@ class SB_Builders{
 	}
 
 	function sb_register_metabox(){
-		add_meta_box( 'sb-metabox', __( 'Builds', SB_TEXTDOMAIN), array($this,'sb_builder_textareas_callback'), 'scratch_builder' );
+		add_meta_box( 'sb-metabox', __( 'Happy Coding!', SB_TEXTDOMAIN), array($this,'sb_builder_textareas_callback'), 'scratch_builder' );
 	}
 
 	function sb_builder_textareas_callback(){
-		echo "test";
+		?>
+		<h2>HTML</h2>
+    	<textarea id="sb_build_html" name="sb_build_html"></textarea>
+		<?php
 	}
 }
 
