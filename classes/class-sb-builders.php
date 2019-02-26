@@ -32,12 +32,10 @@ class SB_Builders{
 			};
 
 			var a = ["sb_build_html"];
-
 			var x = 0;
 
 			a.forEach(function(entry) {
 				x++;
-				var z = 'editor_'+x;
 				var z = CodeMirror.fromTextArea(document.getElementById(entry), {
 				  mode: mixedMode,
 				  styleActiveLine: true,
