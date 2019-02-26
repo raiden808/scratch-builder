@@ -18,7 +18,11 @@ class SB_Scripts{
 			//extension js
 			wp_enqueue_script( 'sb-mirror-xml', SB_PLUGIN_URL . 'assets/code_mirror/js/xml.js' );
 			wp_enqueue_script( 'sb-mirror-active', SB_PLUGIN_URL . 'assets/code_mirror/js/active-line.js' );
-			wp_enqueue_script( 'sb-mirror-active', SB_PLUGIN_URL . 'assets/code_mirror/js/active-line.js' );
+
+			//language js
+			wp_enqueue_script( 'sb-mirror-css', CALLBOX_PLUGIN_URL . 'assets/code_mirror/js/css.js' );
+			wp_enqueue_script( 'sb-mirror-javascript', SB_PLUGIN_URL . 'assets/code_mirror/js/javascript.js');
+			wp_enqueue_script( 'sb-mirror-html', SB_PLUGIN_URL . 'assets/code_mirror/js/htmlmixed.js' );
 
 			//base css
 			wp_enqueue_style( 'sb-mirror-style', SB_PLUGIN_URL . 'assets/code_mirror/css/codemirror.css' );
@@ -26,7 +30,6 @@ class SB_Scripts{
 			//theme css
 			wp_enqueue_style( 'sb-mirror-theme', SB_PLUGIN_URL . 'assets/code_mirror/css/base16-dark.css' );
 			wp_enqueue_style( 'sb-mirror-ocean', SB_PLUGIN_URL . 'assets/code_mirror/css/oceanic-next.css' );
-		
 		}
 	}
 }
