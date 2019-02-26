@@ -5,6 +5,8 @@ if (!defined('ABSPATH')){
 
 class SB_Scripts{
 
+	
+
 }
 
-//edit 1
+new SB_Scripts;
