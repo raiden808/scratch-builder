@@ -20,7 +20,7 @@ class SB_Scripts{
 			wp_enqueue_script( 'sb-mirror-active', SB_PLUGIN_URL . 'assets/code_mirror/js/active-line.js' );
 
 			//language js
-			wp_enqueue_script( 'sb-mirror-css', CALLBOX_PLUGIN_URL . 'assets/code_mirror/js/css.js' );
+			wp_enqueue_script( 'sb-mirror-css', SB_PLUGIN_URL . 'assets/code_mirror/js/css.js' );
 			wp_enqueue_script( 'sb-mirror-javascript', SB_PLUGIN_URL . 'assets/code_mirror/js/javascript.js');
 			wp_enqueue_script( 'sb-mirror-html', SB_PLUGIN_URL . 'assets/code_mirror/js/htmlmixed.js' );
 
