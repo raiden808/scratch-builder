@@ -32,8 +32,8 @@ class SB_Scripts{
 			wp_enqueue_style( 'sb-mirror-style', SB_PLUGIN_URL . 'assets/code_mirror/css/codemirror.css' );
 
 			//theme css
-			wp_enqueue_style( 'sb-mirror-theme', SB_PLUGIN_URL . 'assets/code_mirror/css/base16-dark.css' );
-			wp_enqueue_style( 'sb-mirror-ocean', SB_PLUGIN_URL . 'assets/code_mirror/css/oceanic-next.css' );
+			wp_enqueue_style( 'sb-mirror-theme', SB_PLUGIN_URL . 'assets/code_mirror/theme/base16-dark.css' );
+			wp_enqueue_style( 'sb-mirror-ocean', SB_PLUGIN_URL . 'assets/code_mirror/theme/oceanic-next.css' );
 		}
 	}
 }

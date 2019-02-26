@@ -16,6 +16,43 @@ class SB_Builders{
 		<h2>HTML</h2>
     	<textarea id="sb_build_html" name="sb_build_html"></textarea>
 		<?php
+
+		$this->sb_builder_mirror_init();
+	}
+
+	function sb_builder_mirror_init(){
+		?>
+		<script type="text/javascript">
+			var mixedMode = {
+				name: "htmlmixed",
+				scriptTypes: [{matches: /\/x-handlebars-template|\/x-mustache/i,
+				               mode: null},
+				              {matches: /(text|application)\/(x-)?vb(a|script)/i,
+				               mode: "vbscript"}]
+			};
+
+			var a = ["sb_build_html"];
+
+			var x = 0;
+
+			a.forEach(function(entry) {
+				x++;
+				var z = 'editor_'+x;
+				var z = CodeMirror.fromTextArea(document.getElementById(entry), {
+				  mode: mixedMode,
+				  styleActiveLine: true,
+				  lineNumbers: true,
+				  lineWrapping: true
+				});
+
+				if(x <= 1){
+					z.setOption("theme", "oceanic-next");	
+				}else{
+					z.setOption("theme", "base16-dark");
+				}
+			});
+		</script>
+		<?php
 	}
 }
 
