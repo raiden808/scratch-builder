@@ -5,6 +5,10 @@ if (!defined('ABSPATH')){
 
 class SB_Scripts{
 
+	function __construct(){
+		add_action('admin_enqueue_scripts',array($this,'sb_admin_scripts'));
+	}
+
 	function sb_admin_scripts(){
 		$screen = get_current_screen();
 		$supported_post_type = array('scratch_builder');
