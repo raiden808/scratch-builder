@@ -7,6 +7,10 @@ if (!defined('ABSPATH')) {
 class SB_Display{
 
 	function sb_build_display($atts = []){
+		
+		$a = shortcode_atts(array( 
+		'build_id' =>  ''),$atts );
+
 		ob_start();
 
 		
