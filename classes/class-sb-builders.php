@@ -12,6 +12,7 @@ class SB_Builders{
 	}
 
 	function sb_builder_textareas_callback(){
+		wp_nonce_field( basename( __FILE__ ), 'sb_build_nonce' );
 		?>
 		<h2>HTML</h2>
     	<textarea id="sb_build_html" name="sb_build_html"></textarea>
@@ -22,6 +23,8 @@ class SB_Builders{
 		<?php
 		$this->sb_builder_mirror_init();
 	}
+
+	function 
 
 	function sb_builder_mirror_init(){
 		?>
