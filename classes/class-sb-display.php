@@ -6,8 +6,12 @@ if (!defined('ABSPATH')) {
 
 class SB_Display{
 
-	function sb_build_display(){
+	function sb_build_display($atts = []){
+		ob_start();
+
 		
+
+		return ob_get_clean();
 	}
 
 }
