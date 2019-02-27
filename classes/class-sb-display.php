@@ -6,6 +6,10 @@ if (!defined('ABSPATH')) {
 
 class SB_Display{
 
+	function sb_build_display(){
+		
+	}
+
 }
 
 new SB_Display;
