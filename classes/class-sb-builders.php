@@ -65,6 +65,14 @@ class SB_Builders{
 		if(isset($_POST['sb_build_html'])){
 	    	update_post_meta( $post_id, 'sb_build_html', $_POST['sb_build_html'] );
 	    } 
+
+	    if(isset($_POST['sb_build_js'])){
+	    	update_post_meta( $post_id, 'sb_build_js', $_POST['sb_build_js'] );
+	    } 
+
+	    if(isset($_POST['sb_build_css'])){
+	    	update_post_meta( $post_id, 'sb_build_css', $_POST['sb_build_css'] );
+	    } 
 	}
 
 }
