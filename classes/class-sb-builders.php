@@ -12,7 +12,7 @@ class SB_Builders{
 		add_meta_box( 'sb-metabox', __( 'Happy Coding!', SB_TEXTDOMAIN), array($this,'sb_builder_textareas_callback'), 'scratch_builder' );
 	}
 
-	function sb_builder_textareas_callback(){
+	function sb_builder_textareas_callback($post){
 		wp_nonce_field( basename( __FILE__ ), 'sb_build_nonce' );
 		?>
 		<h2>HTML</h2>
