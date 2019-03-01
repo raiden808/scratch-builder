@@ -15,11 +15,11 @@ class SB_Builders{
 		wp_nonce_field( basename( __FILE__ ), 'sb_build_nonce' );
 		?>
 		<h2>HTML</h2>
-    	<textarea id="sb_build_html" name="sb_build_html"></textarea>
+    	<textarea id="sb_build_html" name="sb_build_html"><?php echo get_post_meta( $post->ID, 'sb_build_html', true);?></textarea>
 		<h2>JS</h2>
-    	<textarea id="sb_build_js"   name="sb_build_js"></textarea>
+    	<textarea id="sb_build_js"   name="sb_build_js"><?php echo get_post_meta( $post->ID, 'sb_build_js', true);?></textarea>
 		<h2>CSS</h2>
-    	<textarea id="sb_build_css"  name="sb_build_css"></textarea>
+    	<textarea id="sb_build_css"  name="sb_build_css"><?php echo get_post_meta( $post->ID, 'sb_build_css', true);?></textarea>
 		<?php
 		$this->sb_builder_mirror_init();
 	}
