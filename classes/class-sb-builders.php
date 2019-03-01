@@ -57,12 +57,14 @@ class SB_Builders{
 		<?php
 	}
 
-	function sb_builder_save(){
+	function sb_builder_save($post_id){
 		if ( !isset( $_POST['sb_build_nonce'] ) || !wp_verify_nonce( $_POST['sb_build_nonce'], basename( __FILE__ ) ) ){
 			return;
 		}
 
-		
+		if(isset($_POST['sb_build_html'])){
+	    	update_post_meta( $post_id, 'sb_build_html', $_POST['sb_build_html'] );
+	    } 
 	}
 
 }
