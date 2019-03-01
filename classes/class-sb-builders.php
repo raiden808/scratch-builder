@@ -24,8 +24,6 @@ class SB_Builders{
 		$this->sb_builder_mirror_init();
 	}
 
-	function 
-
 	function sb_builder_mirror_init(){
 		?>
 		<script type="text/javascript">
