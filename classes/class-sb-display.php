@@ -6,7 +6,11 @@ if (!defined('ABSPATH')) {
 
 class SB_Display{
 
-	function sb_build_display($atts = [], $content = null){
+	function __construct(){
+		add_shortcode( 'sb_build_display', array($this,'sb_build_display_callback') );
+	}
+
+	function sb_build_display_callback($atts = [], $content = null){
 		
 		$a = shortcode_atts(array( 
 		'build_id' =>  ''),$atts );
