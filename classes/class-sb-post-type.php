@@ -38,8 +38,10 @@ class SB_Post_Type{
 			'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
 			'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 		);
+
+
 		$args = array(
-			'label'                 => __( 'Scratch Build', 'text_domain' ),
+			'label'                 => __( 'Build Type', 'text_domain' ),
 			'description'           => __( 'Post Type Description', 'text_domain' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title' ),
@@ -59,6 +61,7 @@ class SB_Post_Type{
 			'capability_type'       => 'page',
 		);
 		register_post_type( 'scratch_builder', $args );
+		register_taxonomy( 'build_type', array( 'scratch_builder' ), $args );
 	}
 }
 
