@@ -7,6 +7,8 @@ class SB_Post_Type{
 	function __construct() {
 	    add_action('init',array($this,'scratch_builder_postype'));
 	    add_action('init',array($this,'scratch_builder_taxonomy'));
+		add_action( 'restrict_manage_posts', array($this,'sb_filter_list') );
+		add_filter( 'parse_query',array($this,'sb_perform_filtering'));
 	}
 	function scratch_builder_postype() {
 
@@ -100,6 +102,35 @@ class SB_Post_Type{
 			'show_tagcloud'              => true,
 		);
 		register_taxonomy( 'build_type', array( 'scratch_builder' ), $args );
+	}
+
+	//display cats for filter
+	function sb_filter_list() {
+	    $screen = get_current_screen();
+	    global $wp_query;
+	    if ( $screen->post_type == 'scratch_builder' ) {
+	        wp_dropdown_categories( array(
+	            'show_option_all' => 'Show Build Type',
+	            'taxonomy' => 'build_type',
+	            'name' => 'build_type',
+	            'orderby' => 'build_type',
+	            'selected' => ( isset( $wp_query->query['build_type'] ) ? $wp_query->query['build_type'] : '' ),
+	            'hierarchical' => false,
+	            'depth' => 3,
+	            'show_count' => false,
+	            'hide_empty' => true,
+	        ) );
+	    }
+	}
+
+
+	//displays filtered category
+	function sb_perform_filtering( $query ) {
+	    $qv = &$query->query_vars;
+	    if ( ( $qv['build_type'] ) && is_numeric( $qv['build_type'] ) ) {
+	        $term = get_term_by( 'id', $qv['build_type'], 'build_type' );
+	        $qv['build_type'] = $term->slug;
+	    }
 	}
 }
 
