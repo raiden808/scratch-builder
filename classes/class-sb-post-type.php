@@ -9,6 +9,9 @@ class SB_Post_Type{
 	    add_action('init',array($this,'scratch_builder_taxonomy'));
 		add_action( 'restrict_manage_posts', array($this,'sb_filter_list') );
 		add_filter( 'parse_query',array($this,'sb_perform_filtering'));
+
+		add_filter('manage_scratch_builder_posts_columns', array($this,'sb_columns_admin_head'), 10);
+		add_action('manage_scratch_builder_posts_custom_column',array($this,'sb_columns_admin_content'), 10, 2);
 	}
 	function scratch_builder_postype() {
 
@@ -132,6 +135,31 @@ class SB_Post_Type{
 	        $qv['build_type'] = $term->slug;
 	    }
 	}
+
+
+	// add_filter('manage_scratch_builder_posts_columns', 'sb_columns_admin_head', 10);
+	// add_action('manage_scratch_builder_posts_custom_column', 'sb_columns_admin_content', 10, 2);
+	 
+	function sb_columns_admin_head($defaults) {
+	    $new = array();
+	    $tags = $defaults['shortcodes'];  // save the tags column
+	    unset($defaults['shortcodes']);   // remove it from the columns list
+
+	    foreach($defaults as $key=>$value) {
+	        if($key=='taxonomy-build_type') {  // when we find the date column
+	           $new['shortcodes'] = 'Shortcodes';  // put the tags column before it
+	        }    
+	        $new[$key]=$value;
+	    }  
+
+	    return $new;  
+	}
+	function sb_columns_admin_content($column_name, $post_ID) {
+	    if ($column_name == 'shortcodes') {
+	        echo "<b>[sb_build_display build_id='".$post_ID."'][/sb_build_display]</b>";
+	    }
+	}
+
 }
 
 new SB_Post_Type;
