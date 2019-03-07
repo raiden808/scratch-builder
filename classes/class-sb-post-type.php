@@ -136,24 +136,21 @@ class SB_Post_Type{
 	    }
 	}
 
-
-	// add_filter('manage_scratch_builder_posts_columns', 'sb_columns_admin_head', 10);
-	// add_action('manage_scratch_builder_posts_custom_column', 'sb_columns_admin_content', 10, 2);
-	 
+	//query to display new shortcode columns
 	function sb_columns_admin_head($defaults) {
 	    $new = array();
-	    $tags = $defaults['shortcodes'];  // save the tags column
-	    unset($defaults['shortcodes']);   // remove it from the columns list
 
 	    foreach($defaults as $key=>$value) {
-	        if($key=='taxonomy-build_type') {  // when we find the date column
-	           $new['shortcodes'] = 'Shortcodes';  // put the tags column before it
+	        if($key=='taxonomy-build_type') {  
+	           $new['shortcodes'] = 'Shortcodes'; 
 	        }    
 	        $new[$key]=$value;
 	    }  
 
 	    return $new;  
 	}
+
+	//column content
 	function sb_columns_admin_content($column_name, $post_ID) {
 	    if ($column_name == 'shortcodes') {
 	        echo "<b>[sb_build_display build_id='".$post_ID."'][/sb_build_display]</b>";
