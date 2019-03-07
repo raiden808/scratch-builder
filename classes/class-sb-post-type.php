@@ -153,7 +153,7 @@ class SB_Post_Type{
 	//column content
 	function sb_columns_admin_content($column_name, $post_ID) {
 	    if ($column_name == 'shortcodes') {
-	        echo "<b>[sb_build_display build_id='".$post_ID."'][/sb_build_display]</b>";
+	        echo "<b>[sb_build build_id='".$post_ID."'][/sb_build]</b>";
 	    }
 	}
 

@@ -10,6 +10,10 @@ class SB_Builders{
 
 	function sb_register_metabox(){
 		add_meta_box( 'sb-metabox', __( 'Happy Coding!', SB_TEXTDOMAIN), array($this,'sb_builder_textareas_callback'), 'scratch_builder' );
+
+		add_meta_box( 
+    	'sb_metabox_side_id', __( 'Shortcode', SB_TEXTDOMAIN),array($this,'sb_side_metabox_display'),'scratch_builder','side','high'     
+    );
 	}
 
 	function sb_builder_textareas_callback($post){
@@ -74,6 +78,10 @@ class SB_Builders{
 	    if(isset($_POST['sb_build_css'])){
 	    	update_post_meta( $post_id, 'sb_build_css', $_POST['sb_build_css'] );
 	    } 
+	}
+
+	function sb_side_metabox_display($post){
+		echo "<b>[sb_build build_id='".$post->ID."'][/sb_build]</b>";
 	}
 
 }
