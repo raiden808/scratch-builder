@@ -10,3 +10,8 @@ Build something from scratch using js,css and html inside wp-admin!Use on every 
 
 ## Usage 1:
 
+Regular shortcode display:
+
+```
+[sb_build build_id='172']﻿
+```
