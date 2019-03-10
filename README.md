@@ -15,3 +15,12 @@ Regular shortcode display:
 ```
 [sb_build build_id='172']﻿
 ```
+
+## Usage 2:
+
+Using Enclosing Shortcodes
+
+```
+[sb_build build_id='172']﻿content to manipulate[/sb_build]
+```
+
