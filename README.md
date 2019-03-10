@@ -24,3 +24,4 @@ Using Enclosing Shortcodes
 [sb_build build_id='172']﻿content to manipulate[/sb_build]
 ```
 
+<img src="assets/images/Screenshot_6.png"/>
