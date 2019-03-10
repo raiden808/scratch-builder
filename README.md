@@ -23,5 +23,6 @@ Using Enclosing Shortcodes
 ```
 [sb_build build_id='172']﻿content to manipulate[/sb_build]
 ```
+Be sure to use %s where you want your content to appear.
 
 <img src="assets/images/Screenshot_6.png"/>
