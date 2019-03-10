@@ -8,4 +8,5 @@ Build something from scratch using js,css and html inside wp-admin!Use on every 
 <img src="assets/images/Screenshot_3.png"/>
 <img src="assets/images/Screenshot_5.png"/>
 
-## How to use
+## Usage 1:
+
