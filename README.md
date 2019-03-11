@@ -33,4 +33,6 @@ Add a Category for each build
 
 <img src="assets/images/Screenshot_8.png"/>
 
+Quick grab your shortcode right in the Dashboard!
+
 <img src="assets/images/Screenshot_9.png"/>
