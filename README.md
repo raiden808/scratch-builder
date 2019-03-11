@@ -2,7 +2,7 @@
 Build something from scratch using js,css and html inside wp-admin!Use on every page,post or custom post type.
 
 
-## Organize your Codes
+## Your Editors
 
 <img src="assets/images/Screenshot_2.png"/>
 <img src="assets/images/Screenshot_3.png"/>
@@ -26,3 +26,9 @@ Using Enclosing Shortcodes
 Be sure to use %s where you want your content to appear.
 
 <img src="assets/images/Screenshot_6.png"/>
+
+## Organize your codes
+
+Add a category for each build
+
+<img src="assets/images/Screenshot_9.png"/>
