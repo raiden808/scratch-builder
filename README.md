@@ -31,4 +31,4 @@ Be sure to use %s where you want your content to appear.
 
 Add a category for each build
 
-<img src="assets/images/Screenshot_9.png"/>
+<img src="assets/images/Screenshot_8.png"/>
